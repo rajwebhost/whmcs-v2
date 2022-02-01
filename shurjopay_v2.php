@@ -194,7 +194,9 @@
 		$response = send_payment($isSandbox,$token_data->token,$requestbodyJson);
 		$response_decoted = json_decode($response);
 		if(isset($response_decoted->checkout_url) && !empty($response_decoted->checkout_url)) {
-				header("Location: {$response_decoted->checkout_url}");
+				$payment_link = $response_decoted->checkout_url;
+				$button ='<a href="'.$payment_link.'" class="btn btn-success">'.$langPayNow.'</a>';
+		  		return $button;
 				exit;
 		} else {
 			 $errror = "Checkout url not found!";
