@@ -45,10 +45,10 @@
  *
  * @return array
  */
-	function shurjopay_MetaData()
+	function shurjopay_v2_MetaData()
 	{
 		return array(
-			'DisplayName' => 'ShurjoPay',
+			'DisplayName' => 'ShurjoPay v2',
 			'APIVersion' => '2.1', // Use API Version 1.1
 			'DisableLocalCredtCardInput' => true,
 			'TokenisedStorage' => false,
@@ -64,14 +64,14 @@
  *
  * @return array
  */
-	function shurjopay_config()
+	function shurjopay_v2_config()
 	{
 		return array(
 			// the friendly display name for a payment gateway should be
 			// defined here for backwards compatibility
 			'FriendlyName' => array(
 				'Type' => 'System',
-				'Value' => 'ShurjoPay',
+				'Value' => 'ShurjoPay v2',
 			),
 			// a text field type allows for single line text input
 			'merchantName' => array(
@@ -129,7 +129,7 @@
  *
  * @return json 
  */
-	function shurjopay_link($params)
+	function shurjopay_v2_link($params)
 	{
 		// Gateway Configuration Parameters
 		$merchantName = $params['merchantName'];
